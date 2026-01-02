@@ -32,7 +32,7 @@ JDBC URL: jdbc:h2:tcp://localhost:1521/opt/h2-data/test
 
 ## Base URL
 
-/api
+
 
 ---
 
@@ -40,6 +40,7 @@ JDBC URL: jdbc:h2:tcp://localhost:1521/opt/h2-data/test
 
 | Key | Value | Description |
 |---|---|---|
+| Base URL	| /api |	모든 요청의 기본 경로
 | Content-Type | application/json | JSON 요청 |
 | Authorization (선택) | Bearer {token} | 인증 확장 대비 (현재 미사용) |
 
