@@ -1,6 +1,10 @@
 # kangjuhyung_backend
 
-### 🐳 Docker Compose를 사용한 실행 방법
+###  환경 설정 (application.yml) 관련 안내
+- 본 프로젝트의 `application.yml`은 보안상 `.gitignore`에 포함하는 것이 원칙이나, **과제 평가 시 별도의 설정 없이 즉시 실행 및 테스트 환경을 재현**할 수 있도록 의도적으로 포함하였습니다.
+- 실제 운영 환경에서는 민감 정보를 분리하고 환경 변수(Environment Variables)를 통해 관리하는 설정을 지향합니다.
+
+### Docker Compose를 사용한 실행 방법
 
 프로젝트 루트 디렉토리에서 아래 명령어를 순서대로 실행하세요.
 
