@@ -1,8 +1,29 @@
 # kangjuhyung_backend
 
-API 명세서
+### 🐳 Docker Compose를 사용한 실행 방법
 
----
+프로젝트 루트 디렉토리에서 아래 명령어를 순서대로 실행하세요.
+
+**1. 프로젝트 빌드 (JAR 생성)**
+```bash
+  ./gradlew clean build -x test
+```
+**2. Docker Compose 실행**
+
+Bash
+```bash
+  docker-compose up --build -d
+```
+
+애플리케이션은 http://localhost:8080에서 실행됩니다.
+
+H2 Console: http://localhost:81
+JDBC URL: jdbc:h2:tcp://localhost:1521/opt/h2-data/test
+
+
+## API 명세서
+
+
 
 ## Base URL
 
@@ -91,6 +112,19 @@ Request Body
   "money": 30000
 }
 ```
+Response (200 OK)
+
+```json
+{
+  "withdrawnAmount": 30000,
+  "balanceBefore": 150000,
+  "balanceAfter": 120000,
+  "transactionAt": "2026-01-01T15:00:00",
+  "todayWithdrawTotal": 30000,
+  "dailyWithdrawLimit": 1000000,
+  "todayWithdrawRemaining": 970000
+}
+```
 ### 이체
 **[POST] /transfers**
 
@@ -155,7 +189,7 @@ Response (200 OK)
   "totalPages": 1
 }
 ```
-거래내역 상세(시간 및 type) 조회
+### 거래내역 상세(시간 및 type) 조회
 
 **[GET] /accounts/{accountNumber}/histories**
 
