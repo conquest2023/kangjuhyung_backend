@@ -18,6 +18,7 @@ Bash
 애플리케이션은 http://localhost:8080에서 실행됩니다.
 
 H2 Console: http://localhost:81
+
 JDBC URL: jdbc:h2:tcp://localhost:1521/opt/h2-data/test
 
 
