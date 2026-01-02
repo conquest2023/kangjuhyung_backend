@@ -4,6 +4,10 @@ package com.test.account.controller.advice;
 import org.springframework.http.HttpStatus;
 
 public enum ErrorCode {
+    NOT_FOUND(HttpStatus.NOT_FOUND, "NOT_FOUND", "요청한 경로를 찾을 수 없습니다"),
+
+    METHOD_NOT_ALLOWED(HttpStatus.METHOD_NOT_ALLOWED, "METHOD_NOT_ALLOWED", "지원하지 않는 HTTP 메서드입니다"),
+
     SELF_TRANSFER_NOT_ALLOWED(HttpStatus.BAD_REQUEST, "SELF_TRANSFER_NOT_ALLOWED", "출금 계좌와 입금 계좌가 동일할 수 없습니다."),
     ACCOUNT_NOT_FOUND(HttpStatus.NOT_FOUND, "ACCOUNT_NOT_FOUND", "계좌가 존재하지 않습니다."),
     INVALID_AMOUNT(HttpStatus.BAD_REQUEST, "INVALID_AMOUNT", "금액은 0보다 커야 합니다."),
